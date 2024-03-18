@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
+import EclipseLogo from '../assets/logo.png';
 
 const headerLinks = [
     { title: 'Home', url: '/' },
@@ -33,7 +34,7 @@ const Header = () => {
         <header className="header" style={{backgroundColor: hasScrolled ? '#2d2d2d' : 'transparent'}}>
             <div className="header__logo">
                 <Link to="/">
-                    <img src="src/assets/logo.png" alt="Logo" />
+                    <img src={EclipseLogo} alt="Logo" />
                 </Link>
             </div>
             <nav className="header__nav">
