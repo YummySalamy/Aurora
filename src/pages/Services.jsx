@@ -9,19 +9,20 @@ const Services = () => {
             content: 'We design and develop websites for businesses and individuals.',
         },
         {
-            title: 'Mobile Development',
-            content: 'We design and develop mobile applications for businesses and individuals.',
+            title: 'AI Solutions',
+            content: 'We provide AI solutions to businesses and individuals.',
         },
         {
             title: 'Consulting',
             content: 'We provide consulting services to businesses and individuals.',
         },
     ]);
+    const isMobile = window.innerWidth < 768;
     return (
         <div className="services">
             <h1>Our Services</h1>
             <p>Check out our services below.</p>
-            <Grid columns={3}>
+            <Grid columns={isMobile ? 1 : 3}>
                 {elements.map((element, index) => (
                     <Card key={index}>
                         <h2>{element.title}</h2>

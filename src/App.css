@@ -147,6 +147,10 @@
   gap: 2em;
 }
 
+.animated-component {
+  animation: fadeIn 1s;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

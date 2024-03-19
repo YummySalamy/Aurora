@@ -12,6 +12,7 @@ const headerLinks = [
 const Header = () => {
     const [elements, setElements] = useState(headerLinks);
     const [hasScrolled, setHasScrolled] = useState(false);
+    const isMobile = window.innerWidth < 768;
 
     useEffect(() => {
         const handleScroll = () => {
@@ -48,11 +49,13 @@ const Header = () => {
                     ))}
                 </ul>
             </nav>
+            { !isMobile &&
             <div className="header__cta">
                <button>
                     Join Us
                </button>
             </div>
+            }   
         </header>
     );
 };
